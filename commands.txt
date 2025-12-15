@@ -1,0 +1,23 @@
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+helm install monitoring prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
+
+kubectl get pods -n monitoring
+
+kubectl port-forward svc/monitoring-grafana -n monitoring 3000:80
+
+kubectl get secret monitoring-grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+#ZoiUQ2NWE2F7t19exQ3VDBBEIJx8fM7lfnqGQ1OG
+
+pip install checkov
+cd terraform
+checkov -d . --download-external-modules true --external-modules-download-path .external_modules -o junitxml > ../screenshots/checkov-output.xml
+checkov -d .
+
+terraform init
+terraform plan -out=tplan.binary
+terraform apply "tfplan.binary"
+terraform show -json tfplan.binary > tfplan.json
+
+kubectl -n demo-app port-forward svc/demo-api 8080:80 &
+for i in {1..50}; do curl -s http://localhost:8080/api > /dev/null; sleep 0.2; done
