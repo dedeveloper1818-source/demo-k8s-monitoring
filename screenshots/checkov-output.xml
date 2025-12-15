@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="7" tests="20" time="0.0">
+	<testsuite disabled="0" errors="0" failures="7" name="terraform_plan scan" skipped="0" tests="20" time="0">
+		<properties>
+			<property name="add_check" value="False"/>
+			<property name="file" value="['tfplan.json']"/>
+			<property name="list" value="False"/>
+			<property name="output" value="['junitxml']"/>
+			<property name="output_bc_ids" value="False"/>
+			<property name="include_all_checkov_policies" value="True"/>
+			<property name="quiet" value="False"/>
+			<property name="compact" value="False"/>
+			<property name="framework" value="['all']"/>
+			<property name="skip_framework" value="[]"/>
+			<property name="run_all_external_checks" value="False"/>
+			<property name="soft_fail" value="False"/>
+			<property name="skip_results_upload" value="False"/>
+			<property name="repo_id" value="cli_repo/repo"/>
+			<property name="branch" value="master"/>
+			<property name="skip_download" value="False"/>
+			<property name="use_enforcement_rules" value="False"/>
+			<property name="external_modules_download_path" value=".external_modules"/>
+			<property name="evaluate_variables" value="True"/>
+			<property name="no_cert_verify" value="False"/>
+			<property name="create_baseline" value="False"/>
+			<property name="output_baseline_as_skipped" value="False"/>
+			<property name="secrets_scan_file_type" value="[]"/>
+			<property name="enable_secret_scan_all_files" value="False"/>
+			<property name="block_list_secret_scan" value="[]"/>
+			<property name="summary_position" value="top"/>
+			<property name="skip_resources_without_violations" value="False"/>
+			<property name="deep_analysis" value="False"/>
+			<property name="no_fail_on_crash" value="False"/>
+			<property name="mask" value="defaultdict(&lt;class 'set'&gt;, {})"/>
+			<property name="scan_secrets_history" value="False"/>
+			<property name="secrets_history_timeout" value="12h"/>
+			<property name="custom_tool_name" value="Checkov"/>
+		</properties>
+		<testcase name="[NONE][CKV_K8S_21] The default namespace should not be used" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_18] Do not admit containers wishing to share the host IPC namespace" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_27] Do not expose the docker daemon socket to containers" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_35] Prefer using secrets as files over secrets as environment variables" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_14] Image Tag should be fixed - not latest or blank" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_34] Ensure that Tiller (Helm v2) is not deployed" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_17] Do not admit containers wishing to share the host process ID namespace" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_30] Apply security context to your pods and containers" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_8] Liveness Probe Should be Configured" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_29] Apply security context to your pods, deployments and daemon_sets" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_9] Readiness Probe Should be Configured" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_19] Do not admit containers wishing to share the host network namespace" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_21] The default namespace should not be used" classname="/tfplan.json.kubernetes_secret.demo" file="/tfplan.json"/>
+		<testcase name="[NONE][CKV_K8S_10] CPU requests should be set" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json">
+			<failure type="failure" message="CPU requests should be set">
+Resource: kubernetes_deployment.demo
+File: /tfplan.json: 0-0
+Guideline: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-9</failure>
+		</testcase>
+		<testcase name="[NONE][CKV_K8S_11] CPU Limits should be set" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json">
+			<failure type="failure" message="CPU Limits should be set">
+Resource: kubernetes_deployment.demo
+File: /tfplan.json: 0-0
+Guideline: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-10</failure>
+		</testcase>
+		<testcase name="[NONE][CKV_K8S_12] Memory Limits should be set" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json">
+			<failure type="failure" message="Memory Limits should be set">
+Resource: kubernetes_deployment.demo
+File: /tfplan.json: 0-0
+Guideline: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-11</failure>
+		</testcase>
+		<testcase name="[NONE][CKV_K8S_26] Do not specify hostPort unless absolutely necessary" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json">
+			<failure type="failure" message="Do not specify hostPort unless absolutely necessary">
+Resource: kubernetes_deployment.demo
+File: /tfplan.json: 0-0
+Guideline: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-25</failure>
+		</testcase>
+		<testcase name="[NONE][CKV_K8S_13] Memory requests should be set" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json">
+			<failure type="failure" message="Memory requests should be set">
+Resource: kubernetes_deployment.demo
+File: /tfplan.json: 0-0
+Guideline: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-12</failure>
+		</testcase>
+		<testcase name="[NONE][CKV_K8S_15] Image Pull Policy should be Always" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json">
+			<failure type="failure" message="Image Pull Policy should be Always">
+Resource: kubernetes_deployment.demo
+File: /tfplan.json: 0-0
+Guideline: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14</failure>
+		</testcase>
+		<testcase name="[NONE][CKV_K8S_43] Image should use digest" classname="/tfplan.json.kubernetes_deployment.demo" file="/tfplan.json">
+			<failure type="failure" message="Image should use digest">
+Resource: kubernetes_deployment.demo
+File: /tfplan.json: 0-0
+Guideline: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39</failure>
+		</testcase>
+	</testsuite>
+</testsuites>
+
