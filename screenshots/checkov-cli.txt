@@ -1,0 +1,94 @@
+
+       _               _
+   ___| |__   ___  ___| | _______   __
+  / __| '_ \ / _ \/ __| |/ / _ \ \ / /
+ | (__| | | |  __/ (__|   < (_) \ V /
+  \___|_| |_|\___|\___|_|\_\___/ \_/
+
+By Prisma Cloud | version: 3.2.495 
+
+terraform_plan scan results:
+
+Passed checks: 13, Failed checks: 7, Skipped checks: 0
+
+Check: CKV_K8S_21: "The default namespace should not be used"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
+Check: CKV_K8S_18: "Do not admit containers wishing to share the host IPC namespace"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-17
+Check: CKV_K8S_27: "Do not expose the docker daemon socket to containers"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-26
+Check: CKV_K8S_35: "Prefer using secrets as files over secrets as environment variables"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-33
+Check: CKV_K8S_14: "Image Tag should be fixed - not latest or blank"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-13
+Check: CKV_K8S_34: "Ensure that Tiller (Helm v2) is not deployed"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-32
+Check: CKV_K8S_17: "Do not admit containers wishing to share the host process ID namespace"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-16
+Check: CKV_K8S_30: "Apply security context to your pods and containers"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-28
+Check: CKV_K8S_8: "Liveness Probe Should be Configured"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-7
+Check: CKV_K8S_29: "Apply security context to your pods, deployments and daemon_sets"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers
+Check: CKV_K8S_9: "Readiness Probe Should be Configured"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8
+Check: CKV_K8S_19: "Do not admit containers wishing to share the host network namespace"
+	PASSED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-18
+Check: CKV_K8S_21: "The default namespace should not be used"
+	PASSED for resource: kubernetes_secret.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20
+Check: CKV_K8S_10: "CPU requests should be set"
+	FAILED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-9
+Check: CKV_K8S_11: "CPU Limits should be set"
+	FAILED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-10
+Check: CKV_K8S_12: "Memory Limits should be set"
+	FAILED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-11
+Check: CKV_K8S_26: "Do not specify hostPort unless absolutely necessary"
+	FAILED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-25
+Check: CKV_K8S_13: "Memory requests should be set"
+	FAILED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-12
+Check: CKV_K8S_15: "Image Pull Policy should be Always"
+	FAILED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14
+Check: CKV_K8S_43: "Image should use digest"
+	FAILED for resource: kubernetes_deployment.demo
+	File: /tfplan.json:0-0
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39
+
